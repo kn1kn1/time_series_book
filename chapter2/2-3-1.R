@@ -48,3 +48,11 @@ par(xaxt="s")
 start_time <- as.POSIXct("0:00",format="%H:%M")
 end_time <- as.POSIXct("24:00",format="%H:%M")
 axis.POSIXct(1, at=seq(start_time, end_time, "hour"), format="%H:%M")
+
+library(lubridate)
+# 年月日が別々にはいっている場合
+make_datetime(2011,3,22,14,46,18, tz="Japan")
+# yyyy-MM-dd HH:mm:ss形式
+ymd_hms("2011-03-11 14:46:18", tz="Japan")
+# 引数がかなり適当でも対応できる
+ymd_hms("20110311144618", tz="Japan")
